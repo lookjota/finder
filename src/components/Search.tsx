@@ -1,7 +1,10 @@
-import React from 'react'
+type SearchProps = {
+  loadUser: (userName: string) => Promise<void>
+}
+
 import { BsSearch } from 'react-icons/bs'
 
-function Search() {
+const Search = ({loadUser}: SearchProps) => {
   return (
     <div>
         <h2>Busque por um usuario</h2>
